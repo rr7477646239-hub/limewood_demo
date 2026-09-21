@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limewood Restaurant & Bar | Premium Dining in Jalpaiguri</title>
+<meta name="description" content="Limewood Restaurant and BAR - Good Food. Great Drinks. Memorable Evenings. in Debnagar, Jalpaiguri. ₹200–₹800 per person.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        charcoal: '#111111',
+        coal: '#0C0C0C',
+        ink: '#080808',
+        brown: '#3A2920',
+        brownlight: '#4A3528',
+        gold: '#C9A35B',
+        golddark: '#A8863F',
+        cream: '#F5F1E8',
+        muted: '#A8A29E'
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"','"Cormorant Garamond"','serif'],
+        cormorant: ['"Cormorant Garamond"','serif'],
+        sans: ['Inter','sans-serif']
+      },
+      letterSpacing: { widest2: '0.35em' }
+    }
+  }
+}
+</script>
+<style>
+  html{scroll-behavior:smooth}
+  body{background:#111111;color:#F5F1E8;font-family:'Inter',sans-serif;overflow-x:hidden}
+  section{scroll-margin-top:80px}
+  ::selection{background:#C9A35B;color:#111}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:#0C0C0C}
+  ::-webkit-scrollbar-thumb{background:#3A2920;border-radius:10px;border:2px solid #0C0C0C}
+  ::-webkit-scrollbar-thumb:hover{background:#C9A35B}
+  .eyebrow{letter-spacing:0.32em;text-transform:uppercase;font-size:11px;font-weight:600;color:#C9A35B}
+  .gold-line{width:64px;height:1px;background:#C9A35B;position:relative}
+  .gold-line.center{margin:0 auto}
+  .gold-line.center::after{content:'';position:absolute;left:50%;top:50%;width:7px;height:7px;background:#C9A35B;transform:translate(-50%,-50%) rotate(45deg)}
+  .ornament{display:flex;align-items:center;gap:12px;justify-content:center}
+  .ornament span.line{height:1px;width:70px;background:linear-gradient(90deg,transparent,#C9A35B);display:block}
+  .ornament span.line.r{background:linear-gradient(90deg,#C9A35B,transparent)}
+  .ornament span.diamond{width:7px;height:7px;background:#C9A35B;transform:rotate(45deg);display:block}
+
+  /* Preloader */
+  #preloader{position:fixed;inset:0;z-index:200;background:#080808;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .8s ease,visibility .8s}
+  #preloader.hide{opacity:0;visibility:hidden;pointer-events:none}
+  .loader-logo{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);letter-spacing:0.18em;color:#F5F1E8}
+  .loader-logo span{color:#C9A35B}
+  .loader-bar{width:200px;height:1px;background:rgba(255,255,255,.12);margin-top:24px;position:relative;overflow:hidden}
+  .loader-bar::after{content:'';position:absolute;left:0;top:0;height:100%;width:0;background:#C9A35B;animation:load 2s ease forwards}
+  @keyframes load{to{width:100%}}
+  .loader-sub{margin-top:14px;font-size:10px;letter-spacing:0.4em;color:#C9A35B}
+
+  /* Navbar */
+  #navbar{transition:all .4s ease}
+  #navbar.scrolled{background:rgba(8,8,8,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,163,91,.15);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+  #navbar.scrolled #topbar{max-height:0;opacity:0;padding:0;overflow:hidden}
+  #topbar{max-height:40px;transition:all .4s ease}
+  .nav-link{position:relative;font-size:13px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,241,232,.8);transition:.3s;font-weight:500}
+  .nav-link:hover,.nav-link.active{color:#C9A35B}
+  .nav-link::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:#C9A35B;transition:.35s}
+  .nav-link:hover::after,.nav-link.active::after{width:100%}
+
+  /* Buttons */
+  .btn-gold{background:#C9A35B;color:#111;font-weight:600;letter-spacing:0.08em;transition:.35s;position:relative;overflow:hidden}
+  .btn-gold:hover{background:#F5F1E8;transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,163,91,.35)}
+  .btn-outline{border:1px solid rgba(245,241,232,.35);color:#F5F1E8;transition:.35s;letter-spacing:0.08em}
+  .btn-outline:hover{border-color:#C9A35B;color:#C9A35B;transform:translateY(-2px);background:rgba(201,163,91,.08)}
+  .btn-dark{background:#111;color:#F5F1E8;transition:.35s}
+  .btn-dark:hover{background:#C9A35B;color:#111;transform:translateY(-2px)}
+
+  /* Hero */
+  .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 2.2s ease;transform:scale(1.05)}
+  .hero-slide.active{opacity:1;transform:scale(1);transition:opacity 2.2s ease,transform 7s ease}
+  .hero-overlay{background:radial-gradient(ellipse at center,rgba(0,0,0,.25) 0%,rgba(0,0,0,.72) 70%,rgba(0,0,0,.88) 100%),linear-gradient(to bottom,rgba(8,8,8,.65) 0%,rgba(8,8,8,.35) 35%,rgba(8,8,8,.75) 100%)}
+  .hero-title{font-family:'Playfair Display',serif;letter-spacing:0.14em;line-height:1}
+  .reveal-hero{opacity:0;transform:translateY(30px);animation:heroUp 1s ease forwards}
+  @keyframes heroUp{to{opacity:1;transform:translateY(0)}}
+  .scroll-hint{width:1px;height:60px;background:rgba(245,241,232,.25);position:relative;overflow:hidden}
+  .scroll-hint::after{content:'';position:absolute;top:0;left:0;width:100%;height:50%;background:#C9A35B;animation:scrollDown 2s ease-in-out infinite}
+  @keyframes scrollDown{0%{transform:translateY(-100%)}100%{transform:translateY(200%)}}
+
+  /* Marquee */
+  .marquee-track{display:flex;gap:0;width:max-content;animation:marquee 28s linear infinite}
+  @keyframes marquee{to{transform:translateX(-50%)}}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(36px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .reveal-delay-1{transition-delay:.15s}.reveal-delay-2{transition-delay:.3s}.reveal-delay-3{transition-delay:.45s}
+
+  /* Menu cards */
+  .dish-card{background:#171717;border:1px solid rgba(255,255,255,.07);transition:.5s cubic-bezier(.16,1,.3,1);overflow:hidden}
+  .dish-card:hover{transform:translateY(-8px);border-color:rgba(201,163,91,.35);box-shadow:0 25px 60px rgba(0,0,0,.55)}
+  .dish-card .img-wrap{overflow:hidden;position:relative}
+  .dish-card img{transition:transform .8s cubic-bezier(.16,1,.3,1)}
+  .dish-card:hover img{transform:scale(1.08)}
+  .filter-pill{border:1px solid rgba(255,255,255,.12);color:rgba(245,241,232,.7);font-size:12px;letter-spacing:0.12em;text-transform:uppercase;transition:.3s;white-space:nowrap}
+  .filter-pill:hover{border-color:#C9A35B;color:#C9A35B}
+  .filter-pill.active{background:#C9A35B;border-color:#C9A35B;color:#111;font-weight:600}
+
+  /* Favorites horizontal */
+  #favTrack{scroll-behavior:smooth;scrollbar-width:none}
+  #favTrack::-webkit-scrollbar{display:none}
+  .fav-card{transition:.5s}
+  .fav-card:hover{transform:translateY(-6px)}
+  .fav-card:hover .fav-img{transform:scale(1.06)}
+  .fav-img{transition:transform 1s cubic-bezier(.16,1,.3,1)}
+  .grabbing{cursor:grabbing!important}
+
+  /* Drinks glow */
+  .drink-glow{box-shadow:0 0 100px rgba(201,163,91,.18),0 30px 80px rgba(0,0,0,.6);border:1px solid rgba(201,163,91,.25)}
+  .bubble{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(201,163,91,.4),transparent);animation:floatUp 6s ease-in-out infinite}
+  @keyframes floatUp{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(-18px);opacity:1}}
+  .drink-thumb{transition:.35s;border:1px solid rgba(255,255,255,.1)}
+  .drink-thumb.active{border-color:#C9A35B;box-shadow:0 0 0 1px #C9A35B}
+
+  /* Masonry */
+  .masonry{columns:1;column-gap:1.25rem}
+  @media(min-width:640px){.masonry{columns:2}}
+  @media(min-width:1024px){.masonry{columns:3}}
+  .masonry-item{break-inside:avoid;margin-bottom:1.25rem;position:relative;overflow:hidden;border-radius:14px;cursor:pointer;background:#1a1a1a}
+  .masonry-item img{transition:transform .8s ease;width:100%;display:block}
+  .masonry-item:hover img{transform:scale(1.07)}
+  .masonry-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75),transparent 60%);opacity:0;transition:.4s;display:flex;align-items:flex-end;padding:20px}
+  .masonry-item:hover .overlay{opacity:1}
+
+  /* Why cards */
+  .why-card{background:#fff;border-top:2px solid transparent;transition:.45s}
+  .why-card:hover{transform:translateY(-8px);border-top-color:#C9A35B;box-shadow:0 25px 50px rgba(58,41,32,.15)}
+
+  /* Reviews */
+  .review-card{background:#171717;border:1px solid rgba(255,255,255,.07);transition:.4s}
+  .review-card:hover{border-color:rgba(201,163,91,.3);transform:translateY(-4px)}
+  .bar-bg{background:rgba(255,255,255,.08);height:6px;border-radius:99px;overflow:hidden}
+  .bar-fill{background:#C9A35B;height:100%;border-radius:99px}
+
+  /* Inputs */
+  .input-lux{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#F5F1E8;transition:.3s;width:100%;outline:none}
+  .input-lux:focus{border-color:#C9A35B;background:rgba(201,163,91,.06);box-shadow:0 0 0 1px #C9A35B}
+  .input-lux::placeholder{color:rgba(245,241,232,.35)}
+  select.input-lux option{background:#111}
+  input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(0.7) sepia(1) saturate(3) hue-rotate(-20deg)}
+  .time-slot{border:1px solid rgba(255,255,255,.12);font-size:12px;transition:.25s;cursor:pointer}
+  .time-slot:hover{border-color:#C9A35B;color:#C9A35B}
+  .time-slot.active{background:#C9A35B;color:#111;border-color:#C9A35B;font-weight:600}
+
+  /* Modals */
+  .modal-backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(8px)}
+  .modal-panel{animation:modalIn .5s cubic-bezier(.16,1,.3,1)}
+  @keyframes modalIn{from{opacity:0;transform:translateY(40px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+  #lightbox{transition:opacity .35s}
+  #lightbox img{max-height:82vh;box-shadow:0 30px 100px rgba(0,0,0,.8)}
+
+  /* Rotating badge */
+  .spin-slow{animation:spin 18s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* Grain */
+  .grain::before{content:'';position:fixed;inset:0;z-index:5;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* Mobile menu */
+  #mobileMenu{transition:.5s cubic-bezier(.16,1,.3,1);transform:translateX(100%)}
+  #mobileMenu.open{transform:translateX(0)}
+  .burger span{display:block;width:26px;height:2px;background:#F5F1E8;transition:.35s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);background:#C9A35B}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);background:#C9A35B}
+
+  /* Toast */
+  .toast{animation:toastIn .45s cubic-bezier(.16,1,.3,1)}
+  @keyframes toastIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+
+  .map-frame{filter:grayscale(25%) contrast(1.05)}
+  .gold-dot{width:5px;height:5px;background:#C9A35B;transform:rotate(45deg);display:inline-block}
+  .divider-v{width:1px;background:rgba(255,255,255,.1)}
+  @media(max-width:768px){.hero-title{letter-spacing:0.08em}}
+</style>
+</head>
+<body class="grain antialiased">
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-logo">LIME<span>WOOD</span></div>
+  <div class="loader-bar"></div>
+  <div class="loader-sub">RESTAURANT &nbsp;•&nbsp; BAR &nbsp;•&nbsp; JALPAIGURI</div>
+</div>
+
+<!-- NAVBAR -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50">
+  <div id="topbar" class="hidden md:block border-b border-white/10 bg-black/30">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between text-[11px] tracking-[0.15em] uppercase text-cream/60">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Debnagar, Jalpaiguri • West Bengal
+        </span>
+        <span class="hidden lg:flex items-center gap-2">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Open Daily 11:00 AM – 11:00 PM
+        </span>
+      </div>
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-1.5 text-gold">★ 3.9 <span class="text-cream/50 normal-case tracking-normal">• 333+ Google Reviews</span></span>
+        <a href="tel:08250772764" class="flex items-center gap-2 hover:text-gold transition"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.84.6 2.8.72A2 2 0 0 1 22 16.92z"/></svg> 082507 72764</a>
+      </div>
+    </div>
+  </div>
+  <nav class="max-w-7xl mx-auto px-6 py-4 md:py-5 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 md:w-11 md:h-11 border border-gold/60 flex items-center justify-center relative">
+        <span class="font-serif text-gold text-xl md:text-2xl font-bold">L</span>
+        <span class="absolute -bottom-[3px] -right-[3px] w-3 h-3 bg-charcoal border-t border-l border-gold/60"></span>
+      </div>
+      <div class="leading-none">
+        <div class="font-serif text-xl md:text-2xl tracking-[0.18em] text-cream">LIMEWOOD</div>
+        <div class="text-[9px] tracking-[0.42em] text-gold mt-1">RESTAURANT & BAR</div>
+      </div>
+    </a>
+    <div class="hidden lg:flex items-center gap-9">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button onclick="openReserve()" class="btn-gold hidden sm:inline-flex items-center gap-2 px-6 py-3 text-[12px] uppercase rounded-sm">
+        Reserve a Table
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button id="burgerBtn" class="burger lg:hidden flex flex-col gap-[5px] p-2" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="fixed inset-0 z-[60] bg-[#080808]/98 backdrop-blur-xl flex flex-col">
+  <div class="flex items-center justify-between px-6 py-5 border-b border-white/10">
+    <div class="font-serif text-xl tracking-[0.18em]">LIME<span class="text-gold">WOOD</span></div>
+    <button id="mobileClose" class="w-10 h-10 border border-white/20 rounded-full flex items-center justify-center hover:border-gold hover:text-gold transition text-xl">✕</button>
+  </div>
+  <div class="flex-1 flex flex-col justify-center px-8 gap-2 overflow-y-auto">
+    <a href="#home" class="mob-link font-serif text-4xl py-3 border-b border-white/5 hover:text-gold transition flex justify-between items-center">Home <span class="text-xs text-gold tracking-widest">01</span></a>
+    <a href="#about" class="mob-link font-serif text-4xl py-3 border-b border-white/5 hover:text-gold transition flex justify-between items-center">About <span class="text-xs text-gold tracking-widest">02</span></a>
+    <a href="#menu" class="mob-link font-serif text-4xl py-3 border-b border-white/5 hover:text-gold transition flex justify-between items-center">Menu <span class="text-xs text-gold tracking-widest">03</span></a>
+    <a href="#gallery" class="mob-link font-serif text-4xl py-3 border-b border-white/5 hover:text-gold transition flex justify-between items-center">Gallery <span class="text-xs text-gold tracking-widest">04</span></a>
+    <a href="#reviews" class="mob-link font-serif text-4xl py-3 border-b border-white/5 hover:text-gold transition flex justify-between items-center">Reviews <span class="text-xs text-gold tracking-widest">05</span></a>
+    <a href="#contact" class="mob-link font-serif text-4xl py-3 hover:text-gold transition flex justify-between items-center">Contact <span class="text-xs text-gold tracking-widest">06</span></a>
+  </div>
+  <div class="p-6 border-t border-white/10 grid grid-cols-2 gap-3">
+    <a href="tel:08250772764" class="btn-outline text-center py-4 text-xs uppercase rounded-sm">Call Now</a>
+    <button onclick="closeMobile();openReserve()" class="btn-gold py-4 text-xs uppercase rounded-sm">Reserve a Table</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home" class="relative h-[100svh] min-h-[720px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1920&auto=format&fit=crop')"></div>
+  </div>
+  <div class="absolute inset-0 hero-overlay"></div>
+  <!-- side vertical -->
+  <div class="hidden xl:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-4 z-10">
+    <span class="text-[10px] tracking-[0.4em] text-cream/40" style="writing-mode:vertical-rl">JALPAIGURI — WEST BENGAL</span>
+    <span class="w-px h-20 bg-gold/30"></span>
+  </div>
+  <div class="hidden xl:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-4 z-10">
+    <span class="w-px h-20 bg-gold/30"></span>
+    <span class="text-[10px] tracking-[0.4em] text-cream/40" style="writing-mode:vertical-rl">EST. OF MEMORABLE EVENINGS</span>
+  </div>
+
+  <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
+    <div class="reveal-hero flex items-center justify-center gap-3 mb-6" style="animation-delay:.2s">
+      <span class="h-px w-12 bg-gold/70"></span>
+      <span class="text-[11px] tracking-[0.45em] text-gold uppercase">Debnagar • Jalpaiguri</span>
+      <span class="h-px w-12 bg-gold/70"></span>
+    </div>
+    <h1 class="reveal-hero hero-title text-[13vw] sm:text-7xl md:text-8xl lg:text-[7.5rem] font-semibold text-cream" style="animation-delay:.35s">LIMEWOOD</h1>
+    <div class="reveal-hero mt-3 flex items-center justify-center gap-4" style="animation-delay:.5s">
+      <span class="h-px w-16 md:w-24 bg-white/20"></span>
+      <span class="text-[12px] md:text-sm tracking-[0.55em] text-cream/90 uppercase pl-2">Restaurant & Bar</span>
+      <span class="h-px w-16 md:w-24 bg-white/20"></span>
+    </div>
+    <p class="reveal-hero font-cormorant italic text-2xl md:text-[2rem] text-gold mt-6" style="animation-delay:.65s">Good Food. Great Drinks. Memorable Evenings.</p>
+    <p class="reveal-hero text-cream/65 max-w-xl mx-auto mt-4 font-light leading-relaxed text-[15px] md:text-base" style="animation-delay:.8s">Experience delicious food, refreshing drinks and a warm dining atmosphere in the heart of Jalpaiguri.</p>
+    <div class="reveal-hero flex flex-col sm:flex-row items-center justify-center gap-4 mt-9" style="animation-delay:.95s">
+      <a href="#menu" class="btn-outline px-9 py-4 text-[12px] uppercase rounded-sm w-full sm:w-auto text-center">Explore Menu</a>
+      <button onclick="openReserve()" class="btn-gold px-9 py-4 text-[12px] uppercase rounded-sm w-full sm:w-auto">Reserve a Table</button>
+    </div>
+    <div class="reveal-hero mt-8 inline-flex items-center gap-3 text-[12px] tracking-[0.12em] text-cream/60 border border-white/10 bg-black/30 backdrop-blur px-5 py-2.5 rounded-full" style="animation-delay:1.1s">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Debnagar, Jalpaiguri <span class="gold-dot"></span> ₹200–₹800 per person
+    </div>
+  </div>
+
+  <!-- hero dots -->
+  <div class="absolute bottom-28 left-1/2 -translate-x-1/2 flex gap-2 z-10" id="heroDots">
+    <button class="hero-dot w-8 h-[2px] bg-gold transition-all" data-i="0"></button>
+    <button class="hero-dot w-8 h-[2px] bg-white/20 transition-all" data-i="1"></button>
+    <button class="hero-dot w-8 h-[2px] bg-white/20 transition-all" data-i="2"></button>
+  </div>
+
+  <!-- bottom info bar -->
+  <div class="absolute bottom-0 left-0 w-full z-10 border-t border-white/10 bg-black/45 backdrop-blur-md hidden md:block">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-3 divide-x divide-white/10 text-center">
+      <div class="py-4 flex items-center justify-center gap-3 text-sm text-cream/70"><span class="text-gold text-[11px] tracking-[0.25em] uppercase">Opens</span> 11:00 AM Daily</div>
+      <div class="py-4 flex items-center justify-center gap-3 text-sm text-cream/70"><span class="text-gold text-[11px] tracking-[0.25em] uppercase">Rating</span> ★ 3.9 — 333+ Reviews</div>
+      <div class="py-4 flex items-center justify-center gap-3 text-sm text-cream/70"><span class="text-gold text-[11px] tracking-[0.25em] uppercase">Perfect For</span> Dinner • Dates • Family</div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 md:hidden">
+    <div class="scroll-hint"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="bg-coal border-y border-gold/15 py-4 overflow-hidden relative">
+  <div class="marquee-track font-serif text-sm md:text-base tracking-[0.3em] uppercase text-cream/50">
+    <div class="flex items-center gap-10 pr-10">
+      <span>Good Food</span><span class="gold-dot"></span><span class="text-gold/80">Great Drinks</span><span class="gold-dot"></span><span>Memorable Evenings</span><span class="gold-dot"></span><span class="text-gold/80">Dine-In</span><span class="gold-dot"></span><span>Family Dinners</span><span class="gold-dot"></span><span class="text-gold/80">Friends & Dates</span><span class="gold-dot"></span>
+    </div>
+    <div class="flex items-center gap-10 pr-10">
+      <span>Good Food</span><span class="gold-dot"></span><span class="text-gold/80">Great Drinks</span><span class="gold-dot"></span><span>Memorable Evenings</span><span class="gold-dot"></span><span class="text-gold/80">Dine-In</span><span class="gold-dot"></span><span>Family Dinners</span><span class="gold-dot"></span><span class="text-gold/80">Friends & Dates</span><span class="gold-dot"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 md:py-28 bg-charcoal relative overflow-hidden">
+  <div class="absolute -left-20 top-20 font-serif text-[18rem] leading-none text-white/[0.02] select-none hidden lg:block">L</div>
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+    <div class="relative reveal">
+      <div class="rounded-2xl overflow-hidden relative">
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1000&auto=format&fit=crop" alt="Limewood warm dining interior" class="w-full h-[420px] md:h-[560px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      </div>
+      <div class="absolute -bottom-6 -right-2 md:right-8 w-44 md:w-64 rounded-xl overflow-hidden border-4 border-charcoal shadow-2xl hidden sm:block">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop" alt="Elegant table setting" class="w-full h-36 md:h-44 object-cover">
+      </div>
+      <div class="absolute -top-6 -left-2 md:left-6 bg-[#0C0C0C] border border-gold/25 rounded-xl px-5 py-4 shadow-xl flex items-center gap-4">
+        <div class="relative w-16 h-16 flex-shrink-0">
+          <svg class="spin-slow absolute inset-0 w-full h-full" viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text fill="#C9A35B" font-size="11.5" letter-spacing="2.5"><textPath href="#circ">JALPAIGURI • LIMEWOOD • SINCE •</textPath></text></svg>
+          <div class="absolute inset-0 flex items-center justify-center font-serif text-gold text-2xl">✦</div>
+        </div>
+        <div><div class="font-serif text-2xl text-cream">4.9<span class="text-gold text-base">/5</span></div><div class="text-[10px] tracking-[0.2em] uppercase text-cream/50">Loved ambience</div></div>
+      </div>
+      <div class="absolute bottom-6 left-6 bg-black/60 backdrop-blur px-4 py-2 rounded-full text-[11px] tracking-[0.18em] uppercase text-cream/80 border border-white/10">Warm Lighting • Cozy Interiors</div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <p class="eyebrow">About Limewood</p>
+      <h2 class="font-serif text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.08] mt-4 text-cream">A Place to Eat,<br>Drink <span class="italic text-gold font-cormorant">&</span> Unwind</h2>
+      <div class="gold-line mt-6"></div>
+      <p class="text-cream/65 leading-relaxed mt-6 font-light text-[16px]">Limewood Restaurant and BAR brings together delicious food, refreshing beverages and a comfortable atmosphere for memorable moments with friends, family and loved ones.</p>
+      <p class="text-cream/50 leading-relaxed mt-4 font-light text-[15px]">Tucked in Debnagar, Jalpaiguri — our softly-lit dining room, crafted plates and easy-going bar make every evening feel special, whether it's a quiet date or a full family celebration.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+        <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3.5">
+          <span class="w-8 h-8 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center flex-shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span class="text-sm font-medium tracking-wide">Dine-in</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3.5">
+          <span class="w-8 h-8 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center flex-shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span class="text-sm font-medium tracking-wide">Drive-through</span>
+        </div>
+        <div class="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-lg px-4 py-3.5">
+          <span class="w-8 h-8 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center flex-shrink-0"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <span class="text-sm font-medium tracking-wide">Non-contact delivery</span>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-5 mt-9">
+        <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})" class="btn-gold px-8 py-4 text-[12px] uppercase rounded-sm">Discover Limewood</button>
+        <a href="tel:08250772764" class="flex items-center gap-3 group">
+          <span class="w-12 h-12 rounded-full border border-gold/40 flex items-center justify-center group-hover:bg-gold group-hover:text-black text-gold transition"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.84.6 2.8.72A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span><span class="block text-[10px] tracking-[0.25em] uppercase text-cream/50">Call us</span><span class="font-semibold text-cream">082507 72764</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- stats -->
+  <div class="max-w-7xl mx-auto px-6 mt-16 md:mt-20 reveal">
+    <div class="grid grid-cols-2 md:grid-cols-4 border border-white/10 rounded-2xl overflow-hidden bg-white/[0.02]">
+      <div class="p-6 md:p-8 text-center border-b md:border-b-0 border-r border-white/10"><div class="font-serif text-3xl md:text-4xl text-gold"><span class="counter" data-target="333">0</span>+</div><div class="text-[11px] tracking-[0.22em] uppercase text-cream/50 mt-2">Happy Reviews</div></div>
+      <div class="p-6 md:p-8 text-center border-b md:border-b-0 md:border-r border-white/10"><div class="font-serif text-3xl md:text-4xl text-cream">3.9<span class="text-gold text-xl"> ★</span></div><div class="text-[11px] tracking-[0.22em] uppercase text-cream/50 mt-2">Google Rating</div></div>
+      <div class="p-6 md:p-8 text-center border-r border-white/10"><div class="font-serif text-3xl md:text-4xl text-gold"><span class="counter" data-target="60">0</span>+</div><div class="text-[11px] tracking-[0.22em] uppercase text-cream/50 mt-2">Dishes & Drinks</div></div>
+      <div class="p-6 md:p-8 text-center"><div class="font-serif text-3xl md:text-4xl text-cream">11<span class="text-gold text-xl"> AM</span></div><div class="text-[11px] tracking-[0.22em] uppercase text-cream/50 mt-2">Opens Daily</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="py-20 md:py-28 bg-coal relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="eyebrow">Our Menu</p>
+      <h2 class="font-serif text-4xl md:text-5xl mt-4">Something Delicious Awaits</h2>
+      <div class="ornament mt-5"><span class="line"></span><span class="diamond"></span><span class="line r"></span></div>
+      <p class="text-cream/55 mt-5 font-light">From flavorful starters to refreshing drinks, discover some of our popular choices.</p>
+    </div>
+    <div class="flex gap-3 mt-10 overflow-x-auto pb-2 justify-start md:justify-center reveal" id="menuFilters" style="scrollbar-width:none">
+      <button class="filter-pill active px-6 py-2.5 rounded-full" data-filter="all">All</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-filter="starters">Starters</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-filter="chicken">Chicken</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-filter="chinese">Chinese</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-filter="main">Main Course</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-filter="drinks">Drinks</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-filter="mocktails">Mocktails</button>
+    </div>
+    <div id="menuGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10"></div>
+    <div class="text-center mt-12 reveal">
+      <button onclick="openFullMenu()" class="btn-outline px-10 py-4 text-[12px] uppercase rounded-sm inline-flex items-center gap-3">View Full Menu <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      <p class="text-cream/40 text-xs mt-4 tracking-wide">₹200–₹800 per person • Jain & family portions available on request</p>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER FAVORITES -->
+<section class="py-20 md:py-28 bg-charcoal overflow-hidden relative">
+  <div class="absolute right-0 top-10 font-serif text-[14rem] leading-none text-white/[0.02] hidden lg:block select-none">★</div>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 reveal">
+      <div>
+        <p class="eyebrow">Most Loved in Jalpaiguri</p>
+        <h2 class="font-serif text-4xl md:text-5xl mt-4">Customer Favorites</h2>
+        <div class="gold-line mt-5"></div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-xs tracking-[0.2em] uppercase text-cream/40 hidden md:block">Drag / Scroll</span>
+        <button id="favPrev" class="w-12 h-12 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition">←</button>
+        <button id="favNext" class="w-12 h-12 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition">→</button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto pl-6 mt-10 reveal">
+    <div id="favTrack" class="flex gap-6 overflow-x-auto pr-6 pb-4 cursor-grab select-none">
+      <!-- Card 1 -->
+      <article class="fav-card flex-shrink-0 w-[300px] md:w-[360px] bg-[#161616] border border-white/10 rounded-2xl overflow-hidden">
+        <div class="relative h-[260px] md:h-[300px] overflow-hidden">
+          <img class="fav-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=800&auto=format&fit=crop" alt="Chicken Dry Fry" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-gold text-black text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">Bestseller</span>
+          <span class="absolute bottom-3 right-4 font-serif text-6xl text-white/15">01</span>
+          <span class="absolute bottom-4 left-4 flex items-center gap-1.5 text-xs bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10"><span class="text-gold">★</span> 4.8 • 120+ orders</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3"><h3 class="font-serif text-2xl">Chicken Dry Fry</h3><span class="text-gold font-semibold whitespace-nowrap">₹280</span></div>
+          <p class="text-cream/55 text-sm mt-2 font-light leading-relaxed">Crispy, fiery and tossed in burnt garlic & peppers. Jalpaiguri's most reordered starter.</p>
+          <div class="flex gap-3 mt-5"><button onclick="orderDish('Chicken Dry Fry')" class="btn-gold flex-1 py-3 text-[11px] uppercase rounded-sm">Order Now</button><button onclick="openFullMenu()" class="btn-outline flex-1 py-3 text-[11px] uppercase rounded-sm">View Menu</button></div>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="fav-card flex-shrink-0 w-[300px] md:w-[360px] bg-[#161616] border border-white/10 rounded-2xl overflow-hidden">
+        <div class="relative h-[260px] md:h-[300px] overflow-hidden">
+          <img class="fav-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=800&auto=format&fit=crop" alt="Chicken Lollipop" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/90 text-black text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">Crowd Favorite</span>
+          <span class="absolute bottom-3 right-4 font-serif text-6xl text-white/15">02</span>
+          <span class="absolute bottom-4 left-4 flex items-center gap-1.5 text-xs bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10"><span class="text-gold">★</span> 4.7 • Party pick</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3"><h3 class="font-serif text-2xl">Chicken Lollipop</h3><span class="text-gold font-semibold whitespace-nowrap">₹260</span></div>
+          <p class="text-cream/55 text-sm mt-2 font-light leading-relaxed">Juicy frenched chicken glazed in a spicy-sweet sauce. Perfect with chilled beverages.</p>
+          <div class="flex gap-3 mt-5"><button onclick="orderDish('Chicken Lollipop')" class="btn-gold flex-1 py-3 text-[11px] uppercase rounded-sm">Order Now</button><button onclick="openFullMenu()" class="btn-outline flex-1 py-3 text-[11px] uppercase rounded-sm">View Menu</button></div>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="fav-card flex-shrink-0 w-[300px] md:w-[360px] bg-[#161616] border border-gold/25 rounded-2xl overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-[3px] bg-gold"></div>
+        <div class="relative h-[260px] md:h-[300px] overflow-hidden">
+          <img class="fav-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=800&auto=format&fit=crop" alt="Chilli Chicken Dry" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-gold text-black text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">Chef's Special</span>
+          <span class="absolute bottom-3 right-4 font-serif text-6xl text-gold/25">03</span>
+          <span class="absolute bottom-4 left-4 flex items-center gap-1.5 text-xs bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10"><span class="text-gold">★</span> 4.9 • Must try</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3"><h3 class="font-serif text-2xl">Chilli Chicken Dry</h3><span class="text-gold font-semibold whitespace-nowrap">₹290</span></div>
+          <p class="text-cream/55 text-sm mt-2 font-light leading-relaxed">Wok-tossed with crunchy peppers, onion petals & our signature Indo-Chinese glaze.</p>
+          <div class="flex gap-3 mt-5"><button onclick="orderDish('Chilli Chicken Dry')" class="btn-gold flex-1 py-3 text-[11px] uppercase rounded-sm">Order Now</button><button onclick="openFullMenu()" class="btn-outline flex-1 py-3 text-[11px] uppercase rounded-sm">View Menu</button></div>
+        </div>
+      </article>
+      <!-- Card 4 -->
+      <article class="fav-card flex-shrink-0 w-[300px] md:w-[360px] bg-[#161616] border border-white/10 rounded-2xl overflow-hidden">
+        <div class="relative h-[260px] md:h-[300px] overflow-hidden">
+          <img class="fav-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=800&auto=format&fit=crop" alt="Blue Lagoon" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-[#4aa8de] text-white text-[10px] font-bold tracking-[0.15em] uppercase px-3 py-1.5 rounded-full">Signature Cooler</span>
+          <span class="absolute bottom-3 right-4 font-serif text-6xl text-white/15">04</span>
+          <span class="absolute bottom-4 left-4 flex items-center gap-1.5 text-xs bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10"><span class="text-gold">★</span> 4.8 • Most Instagrammed</span>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between gap-3"><h3 class="font-serif text-2xl">Blue Lagoon</h3><span class="text-gold font-semibold whitespace-nowrap">₹149</span></div>
+          <p class="text-cream/55 text-sm mt-2 font-light leading-relaxed">Electric blue, citrusy & ice-cold. The drink every Limewood evening starts with.</p>
+          <div class="flex gap-3 mt-5"><button onclick="orderDish('Blue Lagoon')" class="btn-gold flex-1 py-3 text-[11px] uppercase rounded-sm">Order Now</button><button onclick="openFullMenu()" class="btn-outline flex-1 py-3 text-[11px] uppercase rounded-sm">View Menu</button></div>
+        </div>
+      </article>
+      <!-- Card 5 CTA -->
+      <article class="fav-card flex-shrink-0 w-[280px] md:w-[300px] rounded-2xl overflow-hidden bg-gradient-to-b from-brown to-[#1a120c] border border-gold/25 flex flex-col items-center justify-center text-center p-8">
+        <div class="w-16 h-16 rounded-full border border-gold/50 flex items-center justify-center text-gold font-serif text-3xl">→</div>
+        <h3 class="font-serif text-2xl mt-6">Explore<br>Full Menu</h3>
+        <p class="text-cream/55 text-sm mt-3 font-light">60+ dishes, Chinese, mains & bar specials</p>
+        <button onclick="openFullMenu()" class="btn-gold px-8 py-3.5 text-[11px] uppercase rounded-sm mt-6">View All</button>
+      </article>
+    </div>
+    <div class="pr-6 mt-6 flex items-center gap-4">
+      <div class="flex-1 h-[2px] bg-white/10 rounded-full overflow-hidden"><div id="favProgress" class="h-full bg-gold rounded-full" style="width:20%"></div></div>
+      <span class="text-[11px] tracking-[0.2em] text-cream/40 uppercase" id="favCount">01 / 05</span>
+    </div>
+  </div>
+</section>
+
+<!-- DRINKS / RAISE A GLASS -->
+<section class="py-20 md:py-28 bg-[#0a0806] relative overflow-hidden">
+  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full pointer-events-none" style="background:radial-gradient(circle,rgba(201,163,91,.09) 0%,transparent 60%)"></div>
+  <div class="bubble w-24 h-24 left-[8%] top-[18%] hidden md:block"></div>
+  <div class="bubble w-14 h-14 left-[42%] bottom-[12%] hidden md:block" style="animation-delay:1.5s"></div>
+  <div class="bubble w-32 h-32 right-[6%] top-[12%] hidden md:block" style="animation-delay:3s"></div>
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-center relative">
+    <div class="reveal order-2 lg:order-1">
+      <p class="eyebrow">Bar & Beverages</p>
+      <h2 class="font-serif text-4xl md:text-6xl mt-4 leading-tight">Raise a <span class="italic text-gold">Glass</span></h2>
+      <p class="text-cream/60 mt-5 font-light leading-relaxed max-w-md">Slow evenings, low lights and something sparkling in hand. From signature coolers to classic bar pours — sip your way through Limewood nights.</p>
+      <div class="mt-8 bg-white/[0.03] border border-gold/25 rounded-2xl p-5 flex items-center gap-5 backdrop-blur">
+        <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=400&auto=format&fit=crop" alt="Blue Lagoon" class="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover flex-shrink-0">
+        <div class="flex-1">
+          <div class="flex items-center gap-2"><span class="text-[10px] tracking-[0.25em] uppercase text-gold">Featured • Signature</span><span class="text-gold text-xs">★ 4.8</span></div>
+          <div class="font-serif text-2xl mt-1">Blue Lagoon</div>
+          <div class="text-cream/50 text-sm font-light">Blue curacao • lemonade • mint • crushed ice</div>
+        </div>
+        <div class="text-right"><div class="text-gold font-serif text-2xl">₹149</div><button onclick="orderDish('Blue Lagoon')" class="text-[11px] tracking-[0.15em] uppercase border-b border-gold/60 text-gold mt-1 hover:text-cream hover:border-cream transition">Order</button></div>
+      </div>
+      <div class="mt-6 space-y-1 max-w-lg">
+        <button class="drink-row w-full flex items-center gap-4 py-4 border-b border-white/10 hover:pl-2 transition-all text-left group" data-drink="0"><span class="font-serif text-lg text-cream group-hover:text-gold transition flex-1">Virgin Mint Mojito</span><span class="hidden sm:block text-xs text-cream/40">mint • lime • soda</span><span class="text-gold font-medium">₹129</span></button>
+        <button class="drink-row w-full flex items-center gap-4 py-4 border-b border-white/10 hover:pl-2 transition-all text-left group" data-drink="1"><span class="font-serif text-lg text-cream group-hover:text-gold transition flex-1">Green Apple Fizz</span><span class="hidden sm:block text-xs text-cream/40">apple • fizz • basil</span><span class="text-gold font-medium">₹139</span></button>
+        <button class="drink-row w-full flex items-center gap-4 py-4 border-b border-white/10 hover:pl-2 transition-all text-left group" data-drink="2"><span class="font-serif text-lg text-cream group-hover:text-gold transition flex-1">Classic Cold Coffee</span><span class="hidden sm:block text-xs text-cream/40">espresso • vanilla</span><span class="text-gold font-medium">₹159</span></button>
+        <button class="drink-row w-full flex items-center gap-4 py-4 text-left group hover:pl-2 transition-all" data-drink="3"><span class="font-serif text-lg text-cream group-hover:text-gold transition flex-1">Limewood Sunset</span><span class="hidden sm:block text-xs text-cream/40">orange • grenadine</span><span class="text-gold font-medium">₹149</span></button>
+      </div>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <button onclick="openFullMenu('drinks')" class="btn-gold px-8 py-4 text-[12px] uppercase rounded-sm">Explore Bar Menu</button>
+        <button onclick="openReserve()" class="btn-outline px-8 py-4 text-[12px] uppercase rounded-sm">Book Evening Table</button>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1 order-1 lg:order-2 relative">
+      <div class="drink-glow rounded-3xl overflow-hidden relative">
+        <img id="drinkMainImg" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop" alt="Cocktails at Limewood bar" class="w-full h-[420px] md:h-[600px] object-cover transition-opacity duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/20"></div>
+        <div class="absolute top-5 left-5 flex items-center gap-2 bg-black/50 backdrop-blur border border-white/15 px-4 py-2 rounded-full text-[11px] tracking-[0.2em] uppercase"><span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Bar Open • Till 11 PM</div>
+        <div class="absolute bottom-0 left-0 w-full p-6 md:p-8">
+          <div id="drinkMainName" class="font-serif text-3xl md:text-4xl">Evenings at the Bar</div>
+          <div id="drinkMainDesc" class="text-cream/60 text-sm mt-1 font-light">Warm lights, clinking glasses & good company</div>
+          <div class="flex gap-3 mt-5">
+            <button class="drink-thumb active w-16 h-16 rounded-xl overflow-hidden" data-drink="0"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Mojito"></button>
+            <button class="drink-thumb w-16 h-16 rounded-xl overflow-hidden" data-drink="1"><img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Blue Lagoon"></button>
+            <button class="drink-thumb w-16 h-16 rounded-xl overflow-hidden" data-drink="2"><img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Bar pour"></button>
+            <button class="drink-thumb w-16 h-16 rounded-xl overflow-hidden" data-drink="3"><img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Cocktails"></button>
+          </div>
+        </div>
+      </div>
+      <div class="absolute -right-3 md:-right-5 top-1/3 bg-[#0C0C0C]/90 backdrop-blur border border-gold/30 rounded-2xl px-5 py-4 shadow-2xl hidden sm:block">
+        <div class="text-[10px] tracking-[0.25em] uppercase text-gold">Tonight's Glow</div>
+        <div class="font-serif text-xl mt-1">Golden Hour 6–8 PM</div>
+      </div>
+      <div class="absolute -left-3 md:-left-5 bottom-16 bg-[#0C0C0C]/90 backdrop-blur border border-white/15 rounded-2xl px-5 py-4 shadow-2xl hidden sm:flex items-center gap-3">
+        <span class="font-serif text-3xl text-gold italic">"</span>
+        <div class="text-sm text-cream/70">Best place in Jalpaiguri<br>for evening drinks</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="py-20 md:py-28 bg-coal">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="eyebrow">Moments at Limewood</p>
+      <h2 class="font-serif text-4xl md:text-5xl mt-4">Step Inside the Atmosphere</h2>
+      <div class="ornament mt-5"><span class="line"></span><span class="diamond"></span><span class="line r"></span></div>
+      <p class="text-cream/55 mt-5 font-light">Warm lights, crafted plates and evenings that linger a little longer.</p>
+    </div>
+    <div class="flex gap-3 mt-8 justify-center flex-wrap reveal" id="galFilters">
+      <button class="filter-pill active px-6 py-2.5 rounded-full" data-g="all">All</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-g="interior">Interior</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-g="food">Food</button>
+      <button class="filter-pill px-6 py-2.5 rounded-full" data-g="drinks">Bar & Drinks</button>
+    </div>
+    <div class="masonry mt-10 reveal" id="galleryGrid">
+      <div class="masonry-item" data-cat="interior" data-cap="Warm dining hall — Limewood, Jalpaiguri"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Restaurant interior" loading="lazy" class="h-72 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Interior</div><div class="font-serif text-lg">Warm dining hall</div></div></div></div>
+      <div class="masonry-item" data-cat="food" data-cap="Chicken Dry Fry — our bestseller"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=800&auto=format&fit=crop" alt="Chicken Dry Fry" loading="lazy" class="h-56 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Food</div><div class="font-serif text-lg">Chicken Dry Fry</div></div></div></div>
+      <div class="masonry-item" data-cat="drinks" data-cap="Signature Blue Lagoon"><img src="https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=800&auto=format&fit=crop" alt="Blue Lagoon drink" loading="lazy" class="h-80 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Bar & Drinks</div><div class="font-serif text-lg">Signature Blue Lagoon</div></div></div></div>
+      <div class="masonry-item" data-cat="interior" data-cat2="x" data-cap="Cozy corners for dates & conversations"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=800&auto=format&fit=crop" alt="Cozy interior" loading="lazy" class="h-60 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Interior</div><div class="font-serif text-lg">Cozy corners</div></div></div></div>
+      <div class="masonry-item" data-cat="food" data-cap="Wok-tossed Indo-Chinese specials"><img src="https://images.unsplash.com/photo-1585032226651-759b3684e08b?q=80&w=800&auto=format&fit=crop" alt="Hakka noodles" loading="lazy" class="h-64 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Food</div><div class="font-serif text-lg">Indo-Chinese specials</div></div></div></div>
+      <div class="masonry-item" data-cat="drinks" data-cap="Evenings at the Limewood bar"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=800&auto=format&fit=crop" alt="Bar area" loading="lazy" class="h-72 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Bar & Drinks</div><div class="font-serif text-lg">The bar at night</div></div></div></div>
+      <div class="masonry-item" data-cat="food" data-cap="Butter chicken & slow-cooked mains"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop" alt="Butter chicken" loading="lazy" class="h-60 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Food</div><div class="font-serif text-lg">Slow-cooked mains</div></div></div></div>
+      <div class="masonry-item" data-cat="interior" data-cap="Elegant table settings for family dinners"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop" alt="Fine dining table" loading="lazy" class="h-80 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Interior</div><div class="font-serif text-lg">Evening table settings</div></div></div></div>
+      <div class="masonry-item" data-cat="drinks" data-cap="Crafted coolers & mocktails"><img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=800&auto=format&fit=crop" alt="Mocktails" loading="lazy" class="h-56 object-cover"><div class="overlay"><div><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Bar & Drinks</div><div class="font-serif text-lg">Crafted coolers</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-20 md:py-28 bg-cream text-charcoal relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="eyebrow">Why Limewood</p>
+      <h2 class="font-serif text-4xl md:text-5xl mt-4 text-[#141414]">Made for Good Evenings</h2>
+      <div class="ornament mt-5"><span class="line"></span><span class="diamond"></span><span class="line r"></span></div>
+      <p class="text-[#5d554d] mt-5 font-light">Everything we do — food, pour, light and music — is designed around one thing: your table.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+      <div class="why-card rounded-2xl p-8 text-center reveal">
+        <div class="w-14 h-14 mx-auto rounded-full bg-[#111] flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="1.5"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
+        <h3 class="font-serif text-xl mt-5">Great Food</h3>
+        <p class="text-sm text-[#6b6258] mt-3 leading-relaxed font-light">From smoky tandoors to wok-tossed Chinese — flavours Jalpaiguri keeps coming back for.</p>
+      </div>
+      <div class="why-card rounded-2xl p-8 text-center reveal reveal-delay-1">
+        <div class="w-14 h-14 mx-auto rounded-full bg-[#111] flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="1.5"><path d="M5 4h14l-7 8-7-8z"/><path d="M12 12v9"/><path d="M8 21h8"/><path d="M17 4l3-2"/></svg></div>
+        <h3 class="font-serif text-xl mt-5">Refreshing Drinks</h3>
+        <p class="text-sm text-[#6b6258] mt-3 leading-relaxed font-light">Signature coolers like Blue Lagoon plus classic bar favourites, served ice-cold.</p>
+      </div>
+      <div class="why-card rounded-2xl p-8 text-center reveal reveal-delay-2">
+        <div class="w-14 h-14 mx-auto rounded-full bg-[#111] flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="1.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3v5zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3v5z"/></svg></div>
+        <h3 class="font-serif text-xl mt-5">Comfortable Atmosphere</h3>
+        <p class="text-sm text-[#6b6258] mt-3 leading-relaxed font-light">Warm lighting, soft music and room to breathe — dine at your own pace.</p>
+      </div>
+      <div class="why-card rounded-2xl p-8 text-center reveal reveal-delay-3">
+        <div class="w-14 h-14 mx-auto rounded-full bg-[#111] flex items-center justify-center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M12 14v4M10 16h4"/></svg></div>
+        <h3 class="font-serif text-xl mt-5">Perfect for Every Occasion</h3>
+        <p class="text-sm text-[#6b6258] mt-3 leading-relaxed font-light">Dates, birthdays, family dinners or friends' night-outs — we set the table right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="py-20 md:py-28 bg-charcoal relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-[380px_1fr] gap-10 lg:gap-14">
+    <div class="reveal">
+      <p class="eyebrow">Guest Stories</p>
+      <h2 class="font-serif text-4xl md:text-5xl mt-4">Loved by<br>Jalpaiguri</h2>
+      <div class="mt-8 bg-[#161616] border border-white/10 rounded-2xl p-7">
+        <div class="flex items-end gap-3"><span class="font-serif text-7xl leading-none">3.9</span><div class="pb-1"><div class="text-gold tracking-[0.15em]">★★★★<span class="text-white/20">★</span></div><div class="text-xs text-cream/50 mt-1">333+ Google Reviews</div></div></div>
+        <div class="mt-6 space-y-3 text-xs">
+          <div class="flex items-center gap-3"><span class="w-6 text-cream/50">5★</span><div class="bar-bg flex-1"><div class="bar-fill" style="width:48%"></div></div><span class="text-cream/40 w-8 text-right">48%</span></div>
+          <div class="flex items-center gap-3"><span class="w-6 text-cream/50">4★</span><div class="bar-bg flex-1"><div class="bar-fill" style="width:26%"></div></div><span class="text-cream/40 w-8 text-right">26%</span></div>
+          <div class="flex items-center gap-3"><span class="w-6 text-cream/50">3★</span><div class="bar-bg flex-1"><div class="bar-fill" style="width:14%"></div></div><span class="text-cream/40 w-8 text-right">14%</span></div>
+          <div class="flex items-center gap-3"><span class="w-6 text-cream/50">2★</span><div class="bar-bg flex-1"><div class="bar-fill" style="width:5%"></div></div><span class="text-cream/40 w-8 text-right">5%</span></div>
+        </div>
+        <div class="flex items-center gap-3 mt-6 pt-6 border-t border-white/10">
+          <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center font-bold text-lg"><span class="text-[#4285F4]">G</span></div>
+          <div class="text-xs text-cream/60">Verified reviews on<br><span class="text-cream font-medium">Google Maps • Jalpaiguri</span></div>
+        </div>
+        <button onclick="toast('Thank you! Review link opening soon.','gold')" class="btn-outline w-full mt-6 py-3.5 text-[11px] uppercase rounded-sm">Write a Review</button>
+      </div>
+    </div>
+    <div>
+      <div class="flex items-center justify-between reveal">
+        <p class="text-[11px] tracking-[0.3em] uppercase text-cream/40">Recent Experiences</p>
+        <div class="flex gap-2">
+          <button id="revPrev" class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition">←</button>
+          <button id="revNext" class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition">→</button>
+        </div>
+      </div>
+      <div id="revTrack" class="grid md:grid-cols-3 gap-5 mt-6">
+        <article class="review-card rounded-2xl p-7 flex flex-col reveal">
+          <div class="text-gold tracking-widest text-sm">★★★★★</div>
+          <p class="text-[15px] text-cream/75 leading-relaxed mt-4 font-light flex-1">"Went for a family dinner last weekend. The Chicken Dry Fry and Chilli Chicken were genuinely excellent. Warm lights, polite staff — feels premium for Jalpaiguri."</p>
+          <div class="flex items-center gap-3 mt-6 pt-5 border-t border-white/10">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-gold to-brown flex items-center justify-center font-serif font-bold text-black">P</div>
+            <div><div class="text-sm font-semibold">Priyanka Roy</div><div class="text-[11px] text-cream/45">Jalpaiguri • Family dinner</div></div>
+          </div>
+        </article>
+        <article class="review-card rounded-2xl p-7 flex flex-col reveal reveal-delay-1 border-gold/25" style="border-color:rgba(201,163,91,.25)">
+          <div class="flex items-center justify-between"><div class="text-gold tracking-widest text-sm">★★★★<span class="text-white/20">★</span></div><span class="text-[10px] tracking-[0.2em] uppercase bg-gold/15 text-gold border border-gold/30 px-2.5 py-1 rounded-full">Top Review</span></div>
+          <p class="text-[15px] text-cream/75 leading-relaxed mt-4 font-light flex-1">"Nice cozy place near Debnagar for dates and friends. Blue Lagoon is a must-try. Good music, comfortable seating. Evening vibe is really nice."</p>
+          <div class="flex items-center gap-3 mt-6 pt-5 border-t border-white/10">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-cream to-muted flex items-center justify-center font-serif font-bold text-black">S</div>
+            <div><div class="text-sm font-semibold">Sourav Das</div><div class="text-[11px] text-cream/45">Siliguri • Friends night</div></div>
+          </div>
+        </article>
+        <article class="review-card rounded-2xl p-7 flex flex-col reveal reveal-delay-2">
+          <div class="text-gold tracking-widest text-sm">★★★★<span class="text-white/20">★</span></div>
+          <p class="text-[15px] text-cream/75 leading-relaxed mt-4 font-light flex-1">"Celebrated my father's birthday here. Staff arranged a quiet corner table. Food quantity is good for the price. Hakka noodles & lollipop were loved by all."</p>
+          <div class="flex items-center gap-3 mt-6 pt-5 border-t border-white/10">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brownlight to-brown flex items-center justify-center font-serif font-bold text-cream">A</div>
+            <div><div class="text-sm font-semibold">Anirban Ghosh</div><div class="text-[11px] text-cream/45">Jalpaiguri • Birthday</div></div>
+          </div>
+        </article>
+      </div>
+      <div class="mt-6 bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-4 reveal">
+        <div class="flex items-center gap-4"><span class="font-serif italic text-xl text-gold">"This is a premium place to spend an evening."</span></div>
+        <span class="text-[11px] tracking-[0.2em] uppercase text-cream/40">— What Jalpaiguri says</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION / CONTACT -->
+<section id="contact" class="py-20 md:py-28 bg-coal">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <p class="eyebrow">Find Us</p>
+      <h2 class="font-serif text-4xl md:text-5xl mt-4">In the Heart of Jalpaiguri</h2>
+      <div class="ornament mt-5"><span class="line"></span><span class="diamond"></span><span class="line r"></span></div>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-6 mt-12 items-stretch">
+      <div class="reveal relative rounded-2xl overflow-hidden border border-white/10 min-h-[380px] lg:min-h-[520px] bg-[#0a0a0a]">
+        <iframe title="Limewood Restaurant location map" src="https://www.google.com/maps?q=Debnagar,Jalpaiguri,Kharia,West+Bengal+735102&output=embed" class="absolute inset-0 w-full h-full map-frame" style="border:0" loading="lazy" allowfullscreen></iframe>
+        <div class="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#0C0C0C]/92 backdrop-blur border border-gold/25 rounded-xl px-5 py-4 flex items-center gap-4 shadow-2xl">
+          <span class="w-11 h-11 rounded-full bg-gold flex items-center justify-center flex-shrink-0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><div class="font-serif text-lg leading-tight">Limewood Restaurant & BAR</div><div class="text-xs text-cream/55 mt-0.5">Debnagar, Jalpaiguri • West Bengal</div></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1 bg-[#141414] border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col">
+        <div class="flex items-center gap-3"><span class="text-[10px] tracking-[0.3em] uppercase bg-gold/15 text-gold border border-gold/30 px-3 py-1.5 rounded-full">Jalpaiguri, West Bengal</span><span class="flex items-center gap-1 text-xs text-cream/60"><span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Open Now</span></div>
+        <h3 class="font-serif text-3xl md:text-4xl mt-5 leading-tight">Limewood Restaurant<br>and BAR</h3>
+        <div class="mt-6 space-y-4 text-[15px] font-light">
+          <div class="flex gap-4"><span class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div class="text-cream/70">Debnagar, Jalpaiguri,<br>Kharia, West Bengal 735102</div></div>
+          <div class="flex gap-4 items-center"><span class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-gold"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.84.6 2.8.72A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:08250772764" class="text-cream font-medium hover:text-gold transition text-lg">082507 72764</a></div>
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5"><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Opening</div><div class="font-medium mt-1">Opens at 11:00 AM</div><div class="text-xs text-cream/45">Daily • Till 11:00 PM</div></div>
+            <div class="bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3.5"><div class="text-[10px] tracking-[0.25em] uppercase text-gold">Price</div><div class="font-medium mt-1">₹200–₹800</div><div class="text-xs text-cream/45">per person</div></div>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-3 mt-8">
+          <a href="https://www.google.com/maps/search/?api=1&query=Limewood+Restaurant+Debnagar+Jalpaiguri+735102" target="_blank" rel="noopener" class="btn-outline text-center py-3.5 text-[11px] uppercase rounded-sm">Get Directions</a>
+          <a href="tel:08250772764" class="btn-outline text-center py-3.5 text-[11px] uppercase rounded-sm">Call Now</a>
+          <button onclick="openReserve()" class="btn-gold py-3.5 text-[11px] uppercase rounded-sm">Reserve a Table</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="relative py-28 md:py-40 overflow-hidden">
+  <div class="absolute inset-0"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1920&auto=format&fit=crop" alt="Cinematic dining" class="w-full h-full object-cover" loading="lazy"><div class="absolute inset-0" style="background:linear-gradient(to bottom,rgba(8,8,8,.88),rgba(8,8,8,.62) 50%,rgba(8,8,8,.9))"></div></div>
+  <div class="relative max-w-3xl mx-auto px-6 text-center reveal">
+    <p class="eyebrow">Reserve Your Evening</p>
+    <h2 class="font-serif text-5xl md:text-7xl mt-5 leading-tight">Your Table<br><span class="italic text-gold">Is Waiting</span></h2>
+    <div class="ornament mt-6"><span class="line"></span><span class="diamond"></span><span class="line r"></span></div>
+    <p class="text-cream/65 mt-6 font-light text-lg">Good food, great company and unforgettable evenings start here.</p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-9">
+      <button onclick="openReserve()" class="btn-gold px-10 py-4 text-[12px] uppercase rounded-sm w-full sm:w-auto">Reserve a Table</button>
+      <a href="#menu" class="btn-outline px-10 py-4 text-[12px] uppercase rounded-sm w-full sm:w-auto text-center bg-black/30 backdrop-blur">Explore Menu</a>
+    </div>
+    <p class="mt-7 text-xs tracking-[0.2em] uppercase text-cream/45">Debnagar, Jalpaiguri • Open Daily from 11 AM • 082507 72764</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink border-t border-gold/15 pt-16 pb-28 md:pb-8">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 border border-gold/60 flex items-center justify-center"><span class="font-serif text-gold text-xl font-bold">L</span></div>
+        <div class="leading-none"><div class="font-serif text-xl tracking-[0.18em]">LIMEWOOD</div><div class="text-[9px] tracking-[0.42em] text-gold mt-1">RESTAURANT & BAR</div></div>
+      </div>
+      <p class="text-cream/50 text-sm mt-5 font-light leading-relaxed">Good Food. Great Drinks. Memorable Evenings. Jalpaiguri's warm address for dinner, dates & family gatherings.</p>
+      <div class="flex gap-3 mt-6">
+        <a href="#" onclick="toast('Follow @limewood.jalpaiguri on Instagram','gold');return false" aria-label="Instagram" class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" onclick="toast('Find us on Facebook — Limewood Jalpaiguri','gold');return false" aria-label="Facebook" class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Limewood+Restaurant+Jalpaiguri" target="_blank" rel="noopener" aria-label="Google" class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.5 2 5.5 4.1 4 7.2l3.4 2.6C8 8.2 9.8 7 12 7c3.3 0 6 2.7 6 6s-2.7 6-6 6c-2.2 0-4-1.2-4.6-2.8L4 18.8C5.5 21.9 8.5 24 12 24c6.6 0 12-5.4 12-12S18.6 2 12 2z" opacity=".9"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-[11px] tracking-[0.3em] uppercase text-gold">Quick Links</h4>
+      <ul class="mt-5 space-y-3 text-sm text-cream/60">
+        <li><a href="#home" class="hover:text-gold transition">Home</a></li>
+        <li><a href="#about" class="hover:text-gold transition">About</a></li>
+        <li><a href="#menu" class="hover:text-gold transition">Menu</a></li>
+        <li><a href="#gallery" class="hover:text-gold transition">Gallery</a></li>
+        <li><a href="#reviews" class="hover:text-gold transition">Reviews</a></li>
+        <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[11px] tracking-[0.3em] uppercase text-gold">Contact</h4>
+      <ul class="mt-5 space-y-3 text-sm text-cream/60 font-light">
+        <li>Debnagar, Jalpaiguri</li>
+        <li>Kharia, West Bengal 735102</li>
+        <li><a href="tel:08250772764" class="text-cream hover:text-gold transition font-medium">082507 72764</a></li>
+        <li class="pt-2"><span class="text-cream/40 text-xs tracking-[0.2em] uppercase">Opening</span><br><span class="text-cream">11:00 AM onwards • Daily</span></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-[11px] tracking-[0.3em] uppercase text-gold">Evenings at Limewood</h4>
+      <p class="text-sm text-cream/50 mt-5 font-light">Get weekend specials & new dishes in your inbox.</p>
+      <form id="newsForm" class="mt-4 flex gap-2">
+        <input type="email" required placeholder="Your email" class="input-lux rounded-sm px-4 py-3 text-sm flex-1">
+        <button class="btn-gold px-5 py-3 rounded-sm text-xs uppercase">Join</button>
+      </form>
+      <div class="mt-5 bg-white/[0.04] border border-white/10 rounded-xl p-4 flex items-center justify-between">
+        <div><div class="text-gold tracking-widest text-sm">★★★★<span class="text-white/20">★</span></div><div class="text-[11px] text-cream/50 mt-1">3.9 • 333+ reviews</div></div>
+        <button onclick="openReserve()" class="btn-gold px-5 py-2.5 text-[11px] uppercase rounded-sm">Book</button>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-cream/35">
+    <span>© 2026 Limewood Restaurant and BAR. All rights reserved.</span>
+    <span class="tracking-[0.2em] uppercase">Crafted with warmth in Jalpaiguri</span>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="fixed bottom-0 left-0 w-full z-40 md:hidden bg-[#0a0a0a]/95 backdrop-blur-lg border-t border-gold/25 px-4 py-3 grid grid-cols-2 gap-3">
+  <a href="tel:08250772764" class="btn-outline text-center py-3.5 text-[11px] uppercase rounded-sm flex items-center justify-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.37 1.9.72 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.35 1.84.6 2.8.72A2 2 0 0 1 22 16.92z"/></svg> Call Now</a>
+  <button onclick="openReserve()" class="btn-gold py-3.5 text-[11px] uppercase rounded-sm">Reserve Table</button>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="backTop" class="fixed bottom-24 md:bottom-8 right-5 z-40 w-11 h-11 rounded-full bg-[#0C0C0C] border border-gold/40 text-gold items-center justify-center hover:bg-gold hover:text-black transition hidden">↑</button>
+
+<!-- RESERVATION MODAL -->
+<div id="reserveModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="modal-backdrop absolute inset-0" onclick="closeReserve()"></div>
+  <div class="modal-panel relative bg-[#111] border border-gold/25 rounded-2xl w-full max-w-4xl max-h-[92vh] overflow-y-auto grid md:grid-cols-[320px_1fr]">
+    <div class="hidden md:block relative">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=700&auto=format&fit=crop" alt="Reserve" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30"></div>
+      <div class="absolute bottom-0 p-7">
+        <div class="text-[10px] tracking-[0.35em] uppercase text-gold">Reserve a Table</div>
+        <div class="font-serif text-3xl mt-2 leading-tight">Your evening<br>begins here.</div>
+        <div class="text-xs text-cream/60 mt-3">Debnagar, Jalpaiguri • 11 AM – 11 PM</div>
+        <div class="flex items-center gap-2 mt-4 text-xs text-cream/60"><span class="text-gold">★ 3.9</span> • 333+ happy reviews</div>
+      </div>
+    </div>
+    <div class="p-6 md:p-9 relative">
+      <button onclick="closeReserve()" class="absolute top-4 right-4 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition">✕</button>
+      <div id="reserveFormView">
+        <p class="eyebrow">Book Your Table</p>
+        <h3 class="font-serif text-3xl mt-2">Reserve at Limewood</h3>
+        <p class="text-cream/50 text-sm mt-2 font-light">We confirm every booking on call / WhatsApp within 15 minutes.</p>
+        <form id="reserveForm" class="mt-6 space-y-4" novalidate>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Full Name *</label><input id="rName" type="text" placeholder="e.g. Priya Sharma" class="input-lux rounded-sm px-4 py-3 text-sm mt-2"></div>
+            <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Phone *</label><input id="rPhone" type="tel" maxlength="10" placeholder="10-digit mobile" class="input-lux rounded-sm px-4 py-3 text-sm mt-2"></div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Date *</label><input id="rDate" type="date" class="input-lux rounded-sm px-4 py-3 text-sm mt-2"></div>
+            <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Occasion</label><select id="rOcc" class="input-lux rounded-sm px-4 py-3 text-sm mt-2"><option>Casual Dinner</option><option>Date Night</option><option>Family Gathering</option><option>Birthday</option><option>Friends Night</option><option>Business Meal</option></select></div>
+          </div>
+          <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Preferred Time *</label><div id="timeSlots" class="grid grid-cols-4 gap-2 mt-2"></div></div>
+          <div class="grid sm:grid-cols-2 gap-4 items-end">
+            <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Guests</label><div class="flex items-center gap-4 mt-2 bg-white/[0.04] border border-white/10 rounded-sm px-4 py-2.5"><button type="button" id="gMinus" class="w-8 h-8 rounded-full border border-white/20 hover:border-gold hover:text-gold transition">−</button><span id="gCount" class="flex-1 text-center font-serif text-xl">2</span><button type="button" id="gPlus" class="w-8 h-8 rounded-full border border-white/20 hover:border-gold hover:text-gold transition">+</button></div></div>
+            <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Seating</label><select id="rSeat" class="input-lux rounded-sm px-4 py-3 text-sm mt-2"><option>Indoor • Cozy</option><option>Window Side</option><option>Quiet Corner</option><option>Near Bar</option><option>Family Table</option></select></div>
+          </div>
+          <div><label class="text-[11px] tracking-[0.2em] uppercase text-cream/50">Special Requests</label><textarea id="rNote" rows="2" placeholder="Birthday cake, window seat, less spicy..." class="input-lux rounded-sm px-4 py-3 text-sm mt-2 resize-none"></textarea></div>
+          <p id="rError" class="text-red-400 text-sm hidden"></p>
+          <button type="submit" id="rSubmit" class="btn-gold w-full py-4 text-[12px] uppercase rounded-sm">Confirm Reservation</button>
+          <p class="text-center text-xs text-cream/40">Or call directly — <a href="tel:08250772764" class="text-gold">082507 72764</a></p>
+        </form>
+      </div>
+      <div id="reserveSuccessView" class="hidden text-center py-6">
+        <div class="w-20 h-20 mx-auto rounded-full bg-gold/15 border border-gold/50 flex items-center justify-center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#C9A35B" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3 class="font-serif text-3xl mt-6">Table Reserved!</h3>
+        <p class="text-cream/55 text-sm mt-2 font-light">We can't wait to host you at Limewood.</p>
+        <div class="mt-6 bg-white/[0.04] border border-gold/25 rounded-xl p-5 text-left text-sm space-y-2">
+          <div class="flex justify-between"><span class="text-cream/50">Booking ID</span><span id="sId" class="text-gold font-semibold">LW-0000</span></div>
+          <div class="flex justify-between"><span class="text-cream/50">Name</span><span id="sName">—</span></div>
+          <div class="flex justify-between"><span class="text-cream/50">Date & Time</span><span id="sWhen">—</span></div>
+          <div class="flex justify-between"><span class="text-cream/50">Guests</span><span id="sGuests">—</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mt-6">
+          <a href="tel:08250772764" class="btn-outline py-3.5 text-[11px] uppercase rounded-sm text-center">Call Us</a>
+          <button onclick="closeReserve()" class="btn-gold py-3.5 text-[11px] uppercase rounded-sm">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FULL MENU MODAL -->
+<div id="fullMenuModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="modal-backdrop absolute inset-0" onclick="closeFullMenu()"></div>
+  <div class="modal-panel relative bg-[#101010] border border-gold/25 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
+    <div class="p-6 md:p-8 border-b border-white/10 flex items-start justify-between bg-[#0C0C0C]">
+      <div><p class="eyebrow">Limewood • Jalpaiguri</p><h3 class="font-serif text-3xl md:text-4xl mt-2">Full Menu</h3><p class="text-xs text-cream/45 mt-1">₹200–₹800 per person • Taxes as applicable</p></div>
+      <button onclick="closeFullMenu()" class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-gold hover:text-gold transition flex-shrink-0">✕</button>
+    </div>
+    <div class="px-6 md:px-8 pt-5 flex gap-2 overflow-x-auto pb-1" id="fullMenuTabs" style="scrollbar-width:none">
+      <button class="filter-pill active px-5 py-2 rounded-full text-[11px]" data-fm="starters">Starters</button>
+      <button class="filter-pill px-5 py-2 rounded-full text-[11px]" data-fm="chicken">Chicken</button>
+      <button class="filter-pill px-5 py-2 rounded-full text-[11px]" data-fm="chinese">Chinese</button>
+      <button class="filter-pill px-5 py-2 rounded-full text-[11px]" data-fm="main">Main Course</button>
+      <button class="filter-pill px-5 py-2 rounded-full text-[11px]" data-fm="drinks">Drinks</button>
+    </div>
+    <div id="fullMenuList" class="p-6 md:p-8 overflow-y-auto flex-1 space-y-1"></div>
+    <div class="p-5 border-t border-white/10 bg-[#0C0C0C] flex flex-col sm:flex-row gap-3">
+      <a href="tel:08250772764" class="btn-outline flex-1 text-center py-3.5 text-[11px] uppercase rounded-sm">Call to Order • 082507 72764</a>
+      <button onclick="closeFullMenu();openReserve()" class="btn-gold flex-1 py-3.5 text-[11px] uppercase rounded-sm">Reserve & Dine-In</button>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="fixed inset-0 z-[110] hidden items-center justify-center p-4 opacity-0">
+  <div class="modal-backdrop absolute inset-0" onclick="closeLightbox()"></div>
+  <button onclick="closeLightbox()" class="absolute top-5 right-5 z-10 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition">✕</button>
+  <button onclick="stepLightbox(-1)" class="absolute left-3 md:left-8 z-10 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition">←</button>
+  <button onclick="stepLightbox(1)" class="absolute right-3 md:right-8 z-10 w-11 h-11 rounded-full bg-black/60 border border-white/20 flex items-center justify-center hover:border-gold hover:text-gold transition">→</button>
+  <figure class="relative z-10 max-w-4xl w-full text-center">
+    <img id="lbImg" src="" alt="Gallery" class="w-full object-contain rounded-xl mx-auto">
+    <figcaption id="lbCap" class="mt-4 font-serif italic text-lg text-cream/80"></figcaption>
+  </figure>
+</div>
+
+<!-- TOASTS -->
+<div id="toastBox" class="fixed bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-8 z-[120] space-y-3 w-[92%] md:w-auto"></div>
+
+<script>
+/* ---------- PRELOADER ---------- */
+window.addEventListener('load',()=>{ setTimeout(()=>document.getElementById('preloader').classList.add('hide'),1600); });
+setTimeout(()=>document.getElementById('preloader').classList.add('hide'),3500);
+
+/* ---------- NAVBAR ---------- */
+const navbar=document.getElementById('navbar');
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  navbar.classList.toggle('scrolled',window.scrollY>60);
+  if(window.scrollY>600){backTop.classList.remove('hidden');backTop.classList.add('flex');}else{backTop.classList.add('hidden');backTop.classList.remove('flex');}
+},{passive:true});
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* active links */
+const navLinks=document.querySelectorAll('.nav-link');
+const sections=['home','about','menu','gallery','reviews','contact'];
+window.addEventListener('scroll',()=>{
+  let cur='home';
+  sections.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-160)cur=id;});
+  navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));
+},{passive:true});
+
+/* ---------- MOBILE MENU ---------- */
+const mobileMenu=document.getElementById('mobileMenu'),burgerBtn=document.getElementById('burgerBtn');
+function openMobile(){mobileMenu.classList.add('open');burgerBtn.classList.add('open');document.body.style.overflow='hidden';}
+function closeMobile(){mobileMenu.classList.remove('open');burgerBtn.classList.remove('open');document.body.style.overflow='';}
+burgerBtn.addEventListener('click',()=>mobileMenu.classList.contains('open')?closeMobile():openMobile());
+document.getElementById('mobileClose').addEventListener('click',closeMobile);
+document.querySelectorAll('.mob-link').forEach(a=>a.addEventListener('click',closeMobile));
+
+/* ---------- HERO SLIDER ---------- */
+const slides=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dot');
+let heroIdx=0,heroTimer;
+function goHero(i){
+  heroIdx=i%slides.length;
+  slides.forEach((s,k)=>s.classList.toggle('active',k===heroIdx));
+  dots.forEach((d,k)=>{d.className='hero-dot h-[2px] transition-all '+(k===heroIdx?'w-8 bg-gold':'w-8 bg-white/20');});
+}
+function autoHero(){heroTimer=setInterval(()=>goHero(heroIdx+1),6000);}
+dots.forEach(d=>d.addEventListener('click',()=>{clearInterval(heroTimer);goHero(+d.dataset.i);autoHero();}));
+autoHero();
+
+/* ---------- REVEAL + COUNTERS ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const cio=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,target=+el.dataset.target;let c=0;const step=Math.max(1,Math.ceil(target/60));
+  const t=setInterval(()=>{c+=step;if(c>=target){c=target;clearInterval(t);}el.textContent=c;},30);
+  cio.unobserve(el);
+}),{threshold:.5});
+document.querySelectorAll('.counter').forEach(el=>cio.observe(el));
+
+/* ---------- MENU DATA ---------- */
+const MENU=[
+ {name:"Chicken Dry Fry",cats:["starters","chicken"],price:280,rating:"4.8",tag:"Bestseller",img:"https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?q=80&w=700&auto=format&fit=crop",desc:"Crispy chicken tossed with burnt garlic, peppers & house spices."},
+ {name:"Chicken Lollipop",cats:["starters","chicken"],price:260,rating:"4.7",tag:"Crowd Favorite",img:"https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?q=80&w=700&auto=format&fit=crop",desc:"Juicy frenched chicken in a spicy-sweet glaze, served sizzling."},
+ {name:"Chilli Chicken Dry",cats:["starters","chicken","chinese"],price:290,rating:"4.9",tag:"Chef's Special",img:"https://images.unsplash.com/photo-1603360946369-dc9bb6258143?q=80&w=700&auto=format&fit=crop",desc:"Wok-tossed with crunchy peppers & signature Indo-Chinese sauce."},
+ {name:"Blue Lagoon",cats:["drinks","mocktails"],price:149,rating:"4.8",tag:"Signature",img:"https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=700&auto=format&fit=crop",desc:"Electric blue cooler — citrus, mint & crushed ice. Iconic Limewood sip."},
+ {name:"Paneer Tikka Angar",cats:["starters"],price:240,rating:"4.6",tag:"Veg Special",veg:true,img:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=700&auto=format&fit=crop",desc:"Smoky char-grilled cottage cheese with mint chutney & onions."},
+ {name:"Chicken Hakka Noodles",cats:["chinese"],price:210,rating:"4.5",tag:"Wok Special",img:"https://images.unsplash.com/photo-1585032226651-759b3684e08b?q=80&w=700&auto=format&fit=crop",desc:"Smoky street-style noodles with julienned chicken & spring onion."},
+ {name:"Butter Chicken & Naan",cats:["main","chicken"],price:320,rating:"4.7",tag:"Classic",img:"https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=700&auto=format&fit=crop",desc:"Slow-simmered tomato-makhani gravy, best mopped with butter naan."},
+ {name:"Virgin Mint Mojito",cats:["drinks","mocktails"],price:129,rating:"4.6",tag:"Cooler",veg:true,img:"https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=700&auto=format&fit=crop",desc:"Muddled mint, lime & soda over lots of ice. Fresh & light."},
+];
+const menuGrid=document.getElementById('menuGrid');
+function dishCard(d){
+  return `<article class="dish-card rounded-2xl" data-cats="${d.cats.join(' ')}">
+    <div class="img-wrap h-52 relative">
+      <img src="${d.img}" alt="${d.name}" loading="lazy" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+      <span class="absolute top-3 left-3 text-[10px] font-bold tracking-[0.12em] uppercase px-3 py-1.5 rounded-full ${d.tag==='Bestseller'||d.tag==="Chef's Special"||d.tag==='Signature'?'bg-gold text-black':'bg-black/60 backdrop-blur text-cream border border-white/20'}">${d.tag}</span>
+      <span class="absolute top-3 right-3 w-6 h-6 bg-[#0C0C0C]/85 rounded flex items-center justify-center border border-white/15" title="${d.veg?'Veg':'Non-veg'}"><span class="w-2.5 h-2.5 rounded-full ${d.veg?'bg-green-500':'bg-red-500'} border ${d.veg?'border-green-500':'border-red-500'}"></span></span>
+      <span class="absolute bottom-3 left-3 text-[11px] bg-black/60 backdrop-blur px-2.5 py-1 rounded-full border border-white/10"><span class="text-gold">★</span> ${d.rating}</span>
+    </div>
+    <div class="p-5">
+      <div class="flex items-start justify-between gap-2"><h3 class="font-serif text-xl leading-snug">${d.name}</h3><span class="text-gold font-semibold whitespace-nowrap">₹${d.price}</span></div>
+      <p class="text-cream/50 text-[13px] mt-2 font-light leading-relaxed min-h-[40px]">${d.desc}</p>
+      <div class="flex gap-2.5 mt-4">
+        <button onclick="openFullMenu()" class="btn-outline flex-1 py-2.5 text-[10px] uppercase rounded-sm tracking-[0.15em]">View Menu</button>
+        <button onclick="orderDish('${d.name}')" class="btn-gold flex-1 py-2.5 text-[10px] uppercase rounded-sm tracking-[0.15em]">Order Now</button>
+      </div>
+    </div>
+  </article>`;
+}
+function renderMenu(f='all'){
+  const list=f==='all'?MENU:MENU.filter(d=>d.cats.includes(f));
+  menuGrid.innerHTML=list.map(dishCard).join('');
+  menuGrid.querySelectorAll('article').forEach((a,i)=>{a.style.opacity='0';a.style.transform='translateY(20px)';setTimeout(()=>{a.style.transition='all .6s cubic-bezier(.16,1,.3,1)';a.style.opacity='1';a.style.transform='translateY(0)';},i*70);});
+}
+renderMenu();
+document.querySelectorAll('#menuFilters .filter-pill').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#menuFilters .filter-pill').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');renderMenu(b.dataset.filter);
+}));
+function orderDish(name){toast(`"${name}" added — call 082507 72764 to confirm your order.`,'gold');}
+
+/* ---------- FAVORITES SCROLL ---------- */
+const favTrack=document.getElementById('favTrack'),favProg=document.getElementById('favProgress'),favCount=document.getElementById('favCount');
+function updFav(){const max=favTrack.scrollWidth-favTrack.clientWidth;const p=max?favTrack.scrollLeft/max:0;favProg.style.width=(20+p*80)+'%';const idx=Math.min(5,Math.round(p*4)+1);favCount.textContent='0'+idx+' / 05';}
+favTrack.addEventListener('scroll',updFav,{passive:true});
+document.getElementById('favPrev').addEventListener('click',()=>favTrack.scrollBy({left:-380,behavior:'smooth'}));
+document.getElementById('favNext').addEventListener('click',()=>favTrack.scrollBy({left:380,behavior:'smooth'}));
+let isDown=false,sx=0,sl=0;
+favTrack.addEventListener('pointerdown',e=>{isDown=true;sx=e.pageX;sl=favTrack.scrollLeft;favTrack.classList.add('grabbing');});
+window.addEventListener('pointerup',()=>{isDown=false;favTrack.classList.remove('grabbing');});
+favTrack.addEventListener('pointermove',e=>{if(!isDown)return;favTrack.scrollLeft=sl-(e.pageX-sx);});
+
+/* ---------- DRINKS INTERACTIVE ---------- */
+const DRINKS=[
+ {name:"Virgin Mint Mojito",desc:"Muddled mint • lime • soda — fresh & light",img:"https://images.unsplash.com/photo-1551538827-9c037cb4f32a?q=80&w=1000&auto=format&fit=crop"},
+ {name:"Blue Lagoon",desc:"Our signature — blue curacao • lemonade • mint",img:"https://images.unsplash.com/photo-1536935338788-846bb9981813?q=80&w=1000&auto=format&fit=crop"},
+ {name:"The Bar at Night",desc:"Classic pours under warm golden light",img:"https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1000&auto=format&fit=crop"},
+ {name:"Evenings at the Bar",desc:"Warm lights, clinking glasses & good company",img:"https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000&auto=format&fit=crop"},
+];
+const drinkMainImg=document.getElementById('drinkMainImg'),drinkMainName=document.getElementById('drinkMainName'),drinkMainDesc=document.getElementById('drinkMainDesc');
+function setDrink(i){
+  drinkMainImg.style.opacity='0';
+  setTimeout(()=>{drinkMainImg.src=DRINKS[i].img;drinkMainName.textContent=DRINKS[i].name;drinkMainDesc.textContent=DRINKS[i].desc;drinkMainImg.style.opacity='1';},250);
+  document.querySelectorAll('.drink-thumb').forEach(t=>t.classList.toggle('active',+t.dataset.drink===i));
+}
+document.querySelectorAll('.drink-thumb,.drink-row').forEach(el=>el.addEventListener('click',()=>setDrink(+el.dataset.drink)));
+
+/* ---------- GALLERY + LIGHTBOX ---------- */
+document.querySelectorAll('#galFilters .filter-pill').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#galFilters .filter-pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  const f=b.dataset.g;
+  document.querySelectorAll('#galleryGrid .masonry-item').forEach(it=>{
+    const show=f==='all'||it.dataset.cat===f;
+    it.style.display=show?'':'none';
+  });
+}));
+const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+let lbList=[],lbIdx=0;
+document.querySelectorAll('#galleryGrid .masonry-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    lbList=[...document.querySelectorAll('#galleryGrid .masonry-item')].filter(i=>i.style.display!=='none');
+    lbIdx=lbList.indexOf(item);showLb();
+  });
+});
+function showLb(){
+  const it=lbList[lbIdx];lbImg.src=it.querySelector('img').src.replace('w=800','w=1400');lbCap.textContent=it.dataset.cap||'';
+  lb.classList.remove('hidden');lb.classList.add('flex');requestAnimationFrame(()=>lb.style.opacity='1');document.body.style.overflow='hidden';
+}
+function closeLightbox(){lb.style.opacity='0';setTimeout(()=>{lb.classList.add('hidden');lb.classList.remove('flex');document.body.style.overflow='';},300);}
+function stepLightbox(d){lbIdx=(lbIdx+d+lbList.length)%lbList.length;const it=lbList[lbIdx];lbImg.style.opacity='0';setTimeout(()=>{lbImg.src=it.querySelector('img').src.replace('w=800','w=1400');lbCap.textContent=it.dataset.cap||'';lbImg.style.opacity='1';},180);}
+document.addEventListener('keydown',e=>{if(lb.classList.contains('hidden'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')stepLightbox(1);if(e.key==='ArrowLeft')stepLightbox(-1);});
+
+/* reviews arrows scroll on mobile */
+document.getElementById('revPrev').addEventListener('click',()=>toast('Showing recent guest stories',''));
+document.getElementById('revNext').addEventListener('click',()=>toast('333+ reviews on Google — thank you Jalpaiguri!','gold'));
+
+/* ---------- FULL MENU MODAL ---------- */
+const FULL={
+ starters:[["Chicken Dry Fry","Crispy, garlic-pepper tossed",280],["Chicken Lollipop","Spicy-sweet glaze, 6 pc",260],["Chilli Chicken Dry","Wok-tossed, peppers",290],["Paneer Tikka Angar","Smoky, mint chutney",240],["Honey Chilli Potato","Crispy, sesame",180],["Tandoori Wings","Char-grilled, 8 pc",270]],
+ chicken:[["Chicken Dry Fry","House bestseller",280],["Chicken Lollipop","Party favorite",260],["Chilli Chicken Dry","Chef's special",290],["Chicken Tikka Masala","Creamy, dhaba style",310],["Kadhai Chicken","Rustic masala, capsicum",320],["Limewood Grilled Chicken","Herb butter, fries",340]],
+ chinese:[["Veg Hakka Noodles","Smoky wok hei",170],["Chicken Hakka Noodles","Street style",210],["Chicken Manchurian","Gravy / dry",250],["Chilli Chicken","Dry / gravy",290],["Veg Fried Rice","Burnt garlic",180],["Chicken Fried Rice","Egg + chicken",220]],
+ main:[["Butter Chicken + 2 Naan","Makhani classic",320],["Kadhai Chicken + Rice","Family serving",340],["Dal Limewood Tadka","Desi ghee, jeera rice",220],["Paneer Butter Masala","Rich & creamy",280],["Chicken Biryani","Raita + salad",260],["Veg Biryani","Saffron, fried onion",210]],
+ drinks:[["Blue Lagoon","Signature cooler",149],["Virgin Mint Mojito","Mint, lime, soda",129],["Green Apple Fizz","Apple, basil fizz",139],["Limewood Sunset","Orange, grenadine",149],["Classic Cold Coffee","Espresso, vanilla",159],["Fresh Lime Soda","Sweet / salted",99]],
+};
+const fmModal=document.getElementById('fullMenuModal'),fmList=document.getElementById('fullMenuList');
+function renderFull(cat){
+  fmList.innerHTML=FULL[cat].map(([n,d,p],i)=>`
+   <div class="flex items-center gap-4 py-4 border-b border-white/[0.07] hover:bg-white/[0.02] px-2 rounded transition group">
+     <span class="font-serif text-white/20 text-lg w-7">${String(i+1).padStart(2,'0')}</span>
+     <div class="flex-1"><div class="font-medium group-hover:text-gold transition">${n}</div><div class="text-xs text-cream/45 font-light">${d}</div></div>
+     <span class="hidden sm:block flex-1 border-b border-dotted border-white/15 mx-2"></span>
+     <span class="text-gold font-semibold">₹${p}</span>
+     <button onclick="orderDish('${n}')" class="text-[10px] tracking-[0.15em] uppercase border border-gold/50 text-gold px-3 py-1.5 rounded-full hover:bg-gold hover:text-black transition">Add</button>
+   </div>`).join('');
+}
+document.querySelectorAll('#fullMenuTabs .filter-pill').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#fullMenuTabs .filter-pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderFull(b.dataset.fm);
+}));
+function openFullMenu(tab){
+  fmModal.classList.remove('hidden');fmModal.classList.add('flex');document.body.style.overflow='hidden';
+  const t=tab&&FULL[tab]?tab:'starters';
+  document.querySelectorAll('#fullMenuTabs .filter-pill').forEach(x=>x.classList.toggle('active',x.dataset.fm===t));
+  renderFull(t);
+}
+function closeFullMenu(){fmModal.classList.add('hidden');fmModal.classList.remove('flex');document.body.style.overflow='';}
+
+/* ---------- RESERVATION ---------- */
+const rModal=document.getElementById('reserveModal');
+const slots=["11:00 AM","12:30 PM","1:30 PM","3:00 PM","6:00 PM","7:30 PM","8:30 PM","9:30 PM"];
+let selSlot="7:30 PM",guests=2;
+const slotBox=document.getElementById('timeSlots');
+slots.forEach(s=>{
+  const b=document.createElement('button');b.type='button';b.textContent=s;
+  b.className='time-slot rounded-sm py-2.5 px-1 text-center'+(s===selSlot?' active':'');
+  b.addEventListener('click',()=>{selSlot=s;slotBox.querySelectorAll('.time-slot').forEach(x=>x.classList.remove('active'));b.classList.add('active');});
+  slotBox.appendChild(b);
+});
+document.getElementById('gMinus').addEventListener('click',()=>{guests=Math.max(1,guests-1);document.getElementById('gCount').textContent=guests;});
+document.getElementById('gPlus').addEventListener('click',()=>{guests=Math.min(20,guests+1);document.getElementById('gCount').textContent=guests;});
+const rDate=document.getElementById('rDate');
+rDate.min=new Date().toISOString().split('T')[0];rDate.value=rDate.min;
+function openReserve(){
+  document.getElementById('reserveFormView').classList.remove('hidden');
+  document.getElementById('reserveSuccessView').classList.add('hidden');
+  rModal.classList.remove('hidden');rModal.classList.add('flex');document.body.style.overflow='hidden';
+}
+function closeReserve(){rModal.classList.add('hidden');rModal.classList.remove('flex');document.body.style.overflow='';}
+document.getElementById('reserveForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('rName').value.trim();
+  const phone=document.getElementById('rPhone').value.trim();
+  const err=document.getElementById('rError');
+  if(name.length<2){err.textContent='Please enter your full name.';err.classList.remove('hidden');return;}
+  if(!/^[6-9]\d{9}$/.test(phone)){err.textContent='Please enter a valid 10-digit mobile number.';err.classList.remove('hidden');return;}
+  if(!rDate.value){err.textContent='Please choose a date.';err.classList.remove('hidden');return;}
+  err.classList.add('hidden');
+  const btn=document.getElementById('rSubmit');btn.textContent='Confirming...';btn.disabled=true;
+  setTimeout(()=>{
+    btn.textContent='Confirm Reservation';btn.disabled=false;
+    const id='LW-'+Math.floor(1000+Math.random()*9000);
+    document.getElementById('sId').textContent=id;
+    document.getElementById('sName').textContent=name;
+    document.getElementById('sWhen').textContent=new Date(rDate.value+'T00:00').toLocaleDateString('en-IN',{day:'numeric',month:'short'})+' • '+selSlot;
+    document.getElementById('sGuests').textContent=guests+' Guests';
+    document.getElementById('reserveFormView').classList.add('hidden');
+    document.getElementById('reserveSuccessView').classList.remove('hidden');
+    toast('Table reserved! See you at Limewood.','gold');
+  },1200);
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeReserve();closeFullMenu();closeMobile();}});
+
+/* ---------- NEWSLETTER + TOAST ---------- */
+document.getElementById('newsForm').addEventListener('submit',e=>{e.preventDefault();e.target.reset();toast('Welcome to Limewood evenings! Check your inbox.','gold');});
+function toast(msg,type){
+  const box=document.getElementById('toastBox');
+  const t=document.createElement('div');
+  t.className='toast flex items-center gap-3 bg-[#141414] border rounded-xl px-5 py-4 shadow-2xl text-sm max-w-md '+(type==='gold'?'border-gold/50':'border-white/15');
+  t.innerHTML=`<span class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${type==='gold'?'bg-gold text-black':'bg-white/10 text-cream'}">${type==='gold'?'✦':'✓'}</span><span class="text-cream/85">${msg}</span>`;
+  box.appendChild(t);
+  setTimeout(()=>{t.style.transition='all .5s';t.style.opacity='0';t.style.transform='translateY(10px)';setTimeout(()=>t.remove(),500);},3400);
+}
+</script>
+</body>
+</html>
